@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
-    public static InputManager instance;
+    private static InputManager instance;//singleton
     [SerializeField] public Vector3 mouseWorldPod;
+
+    public static InputManager Instance { get => instance;}
+
     void Awake()
     {
+        if(InputManager.instance !=null) Debug.LogError("Allow 1 0k");
         InputManager.instance = this;
     }
     void FixedUpdate()

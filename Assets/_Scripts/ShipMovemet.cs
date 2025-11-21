@@ -12,7 +12,7 @@ public class ShipMovemet : MonoBehaviour
  {
     //LAY VI CHUOT TREN TOA DO
    // this.worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-   this.worldPos = InputManager.instance.mouseWorldPod;
+   this.worldPos = InputManager.Instance.mouseWorldPod;
     this.worldPos.z = 0;
     Vector3 newPos = Vector3.Lerp(transform.parent.position, worldPos, speed);
     transform.parent.position = newPos;
